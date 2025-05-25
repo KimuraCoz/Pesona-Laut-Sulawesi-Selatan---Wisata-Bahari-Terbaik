@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesona Laut Sulawesi Selatan - Wisata Bahari Terbaik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --secondary: #34a853;
+            --accent: #fbbc05;
+            --dark: #202124;
+            --light: #f8f9fa;
+        }
+
+        @font-face {
+            font-family: 'Crimson Pro';
+            src: url('/Wisata_Laut/Font/Crimson_Pro/CrimsonPro-VariableFont_wght.ttf') format('truetype');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Crimson Pro', serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1505228395891-9a51e007e60f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        nav {
+            background-color: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+
+        }
+
+        .hero {
+            background-image: url('Foto/losari.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 316px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            animation: fadeIn 2s ease-in-out;
+
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 2.5s ease-in-out;
+            margin: 0 auto;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .destinations {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .destination-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .card-content p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .activities {
+            background-color: #f0f7ff;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .activity-item {
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .activity-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* DESAIN RESPON */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 1rem;
+            }
+
+            .nav-links li {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PEMBUKAAN -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Sulsel Marine Tourism</a>
+            <ul class="nav-links">
+                <li><a href="#destinations">Destinasi</a></li>
+                <li><a href="#activities">Aktivitas</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PROLOG -->
+    <header class="hero">
+        <h1>Pesona Laut Sulawesi Selatan</h1>
+        <p>Temukan keindahan bawah laut dan pantai eksotis di Sulawesi Selatan. Dari Taka Bonerate hingga Bira,
+            nikmati pengalaman wisata bahari yang tak terlupakan.</p>
+        <a href="#destinations" class="btn">Jelajahi Sekarang</a>
+    </header>
+
+    <!-- DESTINASI -->
+    <section id="destinations">
+        <div class="container">
+            <h2>Destinasi Unggulan</h2>
+            <div class="destinations">
+
+                <!-- TAKA BONERATE-->
+                <div class="destination-card">
+                    <img src="Foto/1750px-Keindahan_Taman_Nasional_Takabonerate.jpg" alt="Taka Bonerate"
+                        class="card-img">
+                    <div class="card-content">
+                        <h3>Taman Laut Taka Bonerate</h3>
+                        <p>Surga bawah laut dengan keindahan terumbu karang dan biota laut yang luar biasa, cocok untuk
+                            snorkeling dan diving</p>
+                    </div>
+                </div>
+
+                <!-- PANTAI LOSARI -->
+                <div class="destination-card">
+                    <img src="Foto/keunikan-pantai-losari-sulawesi-selatan.jpg" alt="Pantai Losari" class="card-img">
+                    <div class="card-content">
+                        <h3>Pantai Losari</h3>
+                        <p>Icon Kota Makassar dengan pemandangan sunset yang indah dan berbagai kegiatan seperti
+                            memancing, banana boat, dan sepeda air.</p>
+                    </div>
+                </div>
+
+                <!-- PULAU SAMALONA -->
+                <div class="destination-card">
+                    <img src="Foto/Pulau_Samalona2.jpg" alt="Pulau Samalona" class="card-img">
+                    <div class="card-content">
+                        <h3>Pulau Samalona</h3>
+                        <p>Pulau kecil di depan Kota Makassar yang menawarkan spot snorkeling dan diving yang mudah
+                            diakses dengan terumbu karang yang indah.</p>
+                    </div>
+                </div>
+
+                <!-- BULUPOLOE -->
+                <div class="destination-card">
+                    <img src="Foto/bulu-poloe_20161101_153629.jpg" alt="Pulau Bulupoloe" class="card-img">
+                    <div class="card-content">
+                        <h3>Pulau Bulupoloe</h3>
+                        <p>Pulau dengan keindahan alam pegunungan dan laut yang masih alami.</p>
+                    </div>
+                </div>
+
+                <!-- PULAU BALOIYA -->
+                <div class="destination-card">
+                    <img src="Foto/baiyo.jpg" alt="Pantai Baloiya" class="card-img">
+                    <div class="card-content">
+                        <h3>Pantai Baloiya</h3>
+                        <p>Pantai eksotis di Kabupaten Selayar dengan keindahan alam laut yang luar biasa.</p>
+                    </div>
+                </div>
+
+                <!-- PANTAI MARINA -->
+                <div class="destination-card">
+                    <img src="Foto/Screenshot_2025-05-23-16-23-48-100_com.android.chrome-edit.jpg" alt="Pantai Marina"
+                        class="card-img">
+                    <div class="card-content">
+                        <h3>Pantai Marina</h3>
+                        <p>Pantai dengan desain dan suasana unik, memiliki fasilitas lengkap dan standar dunia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AKTIVITAS -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <h2>Aktivitas Wisata Bahari</h2>
+            <div class="activity-grid">
+                <div class="activity-item">
+                    <div class="activity-icon">🏊</div>
+                    <h3>Snorkeling</h3>
+                    <p>Jelajahi keindahan bawah laut dengan snorkeling di spot-spot terbaik Sulawesi Selatan.</p>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">🤿</div>
+                    <h3>Diving</h3>
+                    <p>Pengalaman menyelam yang tak terlupakan dengan pemandangan terumbu karang dan biota laut yang
+                        beragam.</p>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">⛵</div>
+                    <h3>Sailing</h3>
+                    <p>Nikmati pesona laut Sulsel dengan berlayar mengelilingi pulau-pulau eksotis.</p>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon">🎣</div>
+                    <h3>Memancing</h3>
+                    <p>Pengalaman memancing di tengah laut dengan pemandangan matahari terbit atau terbenam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Galeri Foto</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="Foto/aaa1-2400155047.webp" alt="Pantai Sulsel">
+                    <div class="gallery-caption">Pantai Bira, Bulukumba</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="Foto/taman-laut-taka-bonerate-surga-bawah-laut-di-selayar.jpeg.jpg" alt="Terumbu Karang">
+                    <div class="gallery-caption">Terumbu Karang Taka Bonerate</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="Foto/Penyu-Biota-Laut-Yang-Dilindungi.jpg">
+                    <div class="gallery-caption">Biota Laut Endemik</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="Foto/664afd67ae1fd383454411.jpg" alt="Sunset">
+                    <div class="gallery-caption">Sunset di Pantai Losari</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="Foto/pulau kecil.webp" alt="Pulau">
+                    <div class="gallery-caption">Pulau Kecil di Kepulauan Selayar</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="Foto/66e165630cdeb672476070.webp" alt="Perahu">
+                    <div class="gallery-caption">Perahu Tradisional Phinisi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Tentang Kami</h3>
+                <p>Sulsel Marine Tourism adalah platform informasi wisata bahari di Sulawesi Selatan. Kami berkomitmen
+                    untuk mempromosikan keindahan laut Sulsel secara bertanggung jawab.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Link Cepat</h3>
+                <ul>
+                    <li><a href="#destinations">Destinasi</a></li>
+                    <li><a href="#activities">Aktivitas</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Kontak Kami</h3>
+                <ul>
+                    <li>Email: info@sulselmarinetourism.id</li>
+                    <li>Telepon: +62 821 1234 5678</li>
+                    <li>Alamat: Jl. Pantai Losari No. 10, Makassar</li>
+                </ul>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; Kelompok 1 ASJ | XI TKJ 1.</p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript for testimonial slider
+        document.addEventListener('DOMContentLoaded', function () {
+            const testimonials = document.querySelectorAll('.testimonial');
+            const dots = document.querySelectorAll('.slider-dot');
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                currentSlide = (n + testimonials.length) % testimonials.length;
+                testimonials[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => showSlide(index));
+            });
+
+            // Auto slide every 5 seconds
+            setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
